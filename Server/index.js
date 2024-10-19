@@ -8,7 +8,7 @@ var ModCfg = require('./config/ModuleConfig');
 /*
  * Default Module to Start
  */
-var ModName = ModCfg.WCM.name;
+var ModName = ModCfg.FHM.name;
 var args = process.argv.slice(2);
 
 if (args.length) {
@@ -18,9 +18,14 @@ if (args.length) {
 var objModule = null;
 
 switch (ModName) {
-    case ModCfg.IVAM.name:
+    case ModCfg.WCM.name:
         {
             objModule = require('./module/WebClient');
+            break;
+        }
+        case ModCfg.FHM.name:
+        {
+            objModule = require('./module/fileHandler');
             break;
         }
    
