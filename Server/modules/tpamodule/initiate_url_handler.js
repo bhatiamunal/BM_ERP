@@ -10,7 +10,12 @@ exports = module.exports = function (CTPAModule) {
          * Initiate URL func Map 
          */
         /* Get Request */
-        this._URLFuncMap['/alarms/fetch'] = { func: this.OnFetchAlarm, method: DEFS.HTTP_METHOD_TYPE.GET };
+        this._URLFuncMap['/api/readConfig'] = { func: this.readConfig, method: DEFS.HTTP_METHOD_TYPE.GET };
+        this._URLFuncMap['/api/insert'] = { func: this.insertOperation, method: DEFS.HTTP_METHOD_TYPE.POST };
+        this._URLFuncMap['/api/delete'] = { func: this.deleteOperation, method: DEFS.HTTP_METHOD_TYPE.GET };
+        this._URLFuncMap['/api/update'] = { func: this.updateOperation, method: DEFS.HTTP_METHOD_TYPE.POST };
+        this._URLFuncMap['/api/view'] = { func: this.viewOperation, method: DEFS.HTTP_METHOD_TYPE.GET };
+      
        
 
     };

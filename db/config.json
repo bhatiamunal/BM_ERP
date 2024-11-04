@@ -1,0 +1,244 @@
+{
+    "header": {
+      "logo": {
+        "url": "/assets/logo.png",
+        "altText": "Company Logo"
+      },
+      "brandName": "YourBrand",
+      "navbar": [
+        {
+          "label": "Dashboard",
+          "id": "nav-dashboard"
+        },
+        {
+          "label": "Inventory",
+          "id": "nav-inventory",
+          "submenu": [
+            {
+              "label": "Product",
+              "id": "inv-product",
+              "operations": {
+                "insert": true,
+                "delete": true,
+                "update": true,
+                "create": true
+              },
+              "columns": [
+                { "id": "product_id", "label": "Product ID" },
+                { "id": "product_name", "label": "Product Name" },
+                { "id": "product_desc", "label": "Product Description" },
+                { "id": "category_id", "label": "Category ID" },
+                { "id": "brand_id", "label": "Brand ID" },
+                { "id": "price_id", "label": "Price ID" },
+                { "id": "qty_id", "label": "Quantity ID" }
+              ]
+            },
+            {
+              "label": "Category",
+              "id": "inv-category",
+              "operations": {
+                "insert": true,
+                "delete": true,
+                "update": true,
+                "create": false
+              },
+              "columns": [
+                { "id": "category_id", "label": "Category ID" },
+                { "id": "category_name", "label": "Category Name" },
+                { "id": "category_desc", "label": "Category Description" }
+              ]
+            },
+            {
+              "label": "Brand",
+              "id": "inv-brand",
+              "operations": {
+                "insert": true,
+                "delete": false,
+                "update": true,
+                "create": true
+              },
+              "columns": [
+                { "id": "brand_id", "label": "Brand ID" },
+                { "id": "brand_name", "label": "Brand Name" },
+                { "id": "brand_desc", "label": "Brand Description" }
+              ]
+            },
+            {
+              "label": "Price",
+              "id": "inv-price",
+              "operations": {
+                "insert": false,
+                "delete": false,
+                "update": true,
+                "create": false
+              },
+              "columns": [
+                { "id": "price_id", "label": "Price ID" },
+                { "id": "price_mrp", "label": "MRP" },
+                { "id": "price_sp", "label": "Selling Price" },
+                { "id": "price_cp", "label": "Cost Price" }
+              ]
+            },
+            {
+              "label": "Quantity",
+              "id": "inv-quantity",
+              "operations": {
+                "insert": false,
+                "delete": false,
+                "update": true,
+                "create": false
+              },
+              "columns": [
+                { "id": "qty_id", "label": "Quantity ID" },
+                { "id": "qty_name", "label": "Quantity Name" },
+                { "id": "qty_desc", "label": "Quantity Description" }
+              ]
+            }
+          ]
+        },
+        {
+          "label": "Payment",
+          "id": "nav-payment",
+          "submenu": [
+            {
+              "label": "Vendor",
+              "id": "pay-vendor",
+              "operations": {
+                "insert": true,
+                "delete": true,
+                "update": true,
+                "create": true
+              }
+            },
+            {
+              "label": "Employee",
+              "id": "pay-employee",
+              "operations": {
+                "insert": true,
+                "delete": false,
+                "update": true,
+                "create": false
+              }
+            },
+            {
+              "label": "Customer",
+              "id": "pay-customer",
+              "operations": {
+                "insert": true,
+                "delete": true,
+                "update": true,
+                "create": true
+              }
+            },
+            {
+              "label": "Expenses",
+              "id": "pay-expenses",
+              "operations": {
+                "insert": true,
+                "delete": false,
+                "update": true,
+                "create": true
+              }
+            }
+          ]
+        },
+        {
+          "label": "Purchase",
+          "id": "nav-purchase",
+          "submenu": [
+            {
+              "label": "Estimated",
+              "id": "pur-estimated",
+              "operations": {
+                "insert": true,
+                "delete": true,
+                "update": true,
+                "create": true
+              }
+            },
+            {
+              "label": "Taxable Invoice",
+              "id": "pur-taxable-invoice",
+              "operations": {
+                "insert": true,
+                "delete": false,
+                "update": true,
+                "create": false
+              }
+            }
+          ]
+        },
+        {
+          "label": "Sales",
+          "id": "nav-sales",
+          "submenu": [
+            {
+              "label": "Estimated",
+              "id": "sal-estimated",
+              "operations": {
+                "insert": true,
+                "delete": true,
+                "update": true,
+                "create": true
+              }
+            },
+            {
+              "label": "Taxable",
+              "id": "sal-taxable",
+              "operations": {
+                "insert": true,
+                "delete": false,
+                "update": true,
+                "create": false
+              }
+            }
+          ]
+        },
+        {
+          "label": "User",
+          "id": "nav-user",
+          "submenu": [
+            {
+              "label": "Employee",
+              "id": "user-employee",
+              "operations": {
+                "insert": true,
+                "delete": true,
+                "update": true,
+                "create": true
+              }
+            },
+            {
+              "label": "Vendor",
+              "id": "user-vendor",
+              "operations": {
+                "insert": true,
+                "delete": false,
+                "update": true,
+                "create": true
+              }
+            },
+            {
+              "label": "Customer",
+              "id": "user-customer",
+              "operations": {
+                "insert": true,
+                "delete": true,
+                "update": true,
+                "create": true
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "footer": {
+      "text": "© 2024 YourBrand. All rights reserved.",
+      "links": [
+        { "label": "Privacy Policy" },
+        { "label": "Terms of Service" },
+        { "label": "Contact Us" }
+      ]
+    }
+  }
+  
