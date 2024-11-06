@@ -138,4 +138,4 @@ class FileHandler {
 //     console.error(error.message);
 // }
 
-module.exports = new FileHandler('./db'); // Exporting an instance of the class
+module.exports = new FileHandler('./../db'); // Exporting an instance of the class

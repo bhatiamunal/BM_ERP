@@ -1,7 +1,7 @@
 const CommonModule = require("../../../common/module");
 module.exports = function (CTPAModule) {
     CTPAModule.prototype.readConfig = function (req, res) {
-        let configFile  = CommonModule.readFile(req.body.fileName)
+        let configFile  = CommonModule.readFile('config.json')
         if(configFile.errorCode==0){
            let data  = JSON.parse(configFile.data)
            data.header .navbar.forEach(element => {

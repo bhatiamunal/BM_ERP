@@ -3,8 +3,18 @@
 // var CModule = require("./../../base/Module").CModule;
 var BODY_PARSER = require('body-parser');
 var express = require('express');
+const cors = require('cors');
 var tpaAPP = express();
-var HTTP = require('http');
+// CORS options to allow requests from frontend running on port 5500
+const corsOptions = {
+    origin: 'http://localhost:8080', // Allow only requests from this origin
+    methods: 'GET,POST', // Allow only these methods
+    allowedHeaders: ['Content-Type', 'Authorization'] // Allow only these headers
+};
+
+// Use CORS middleware with specified options
+tpaAPP.use(cors(corsOptions));
+// var HTTP = require('http');
 
 tpaAPP.use(BODY_PARSER.urlencoded({
     parameterLimit: 100000000,
