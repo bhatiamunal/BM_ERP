@@ -1,20 +1,15 @@
 // src/globalState.js
 import { reactive } from 'vue';
-
 const state = reactive({
-  counter: 0, // Example state
+  data: [], 
+  tabulatorFormatter:"",
+  pageDetails:{title:""}
 });
 
-const increment = () => {
-  state.counter++;
-};
 
-const decrement = () => {
-  state.counter--;
-};
+
+
 
 export default {
-  state,
-  increment,
-  decrement,
+  state
 };

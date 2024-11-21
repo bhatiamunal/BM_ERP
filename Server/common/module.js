@@ -47,13 +47,14 @@ class FileHandler {
     }
 
     addDataToFile(fileName, data) {
-        if (!this.isValidJson(data)) {
-           return  { errorCode:1 , data : 'Data is not in valid JSON format.'};
-        }
+        // if (!this.isValidJson(data)) {
+        //    return  { errorCode:1 , data : 'Data is not in valid JSON format.'};
+        // }
         
         const filePath = path.join(this.directory, fileName);
         if (fs.existsSync(filePath)) {
-            fs.appendFileSync(filePath, JSON.stringify(data) + '\n', 'utf8');
+            fs.writeFileSync(filePath, JSON.stringify(data));
+          //  fs.appendFileSync(filePath, data + '\n', 'utf8');
             return { errorCode:0 , data : `Data added to ${fileName}.`};
         } else {
             return { errorCode:1 ,  msg : `File ${fileName} already exists.`};
@@ -138,4 +139,4 @@ class FileHandler {
 //     console.error(error.message);
 // }
 
-module.exports = new FileHandler('./../db'); // Exporting an instance of the class
+module.exports = new FileHandler('C:\\db'); // Exporting an instance of the class
